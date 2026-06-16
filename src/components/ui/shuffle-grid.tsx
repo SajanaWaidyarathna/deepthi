@@ -9,8 +9,15 @@ export const ShuffleHero = () => {
   return (
     <section className="relative isolate overflow-hidden bg-sky-50">
 
+
       {/* Background */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.18),_transparent_40%),radial-gradient(circle_at_top_right,_rgba(14,165,233,0.14),_transparent_35%),linear-gradient(180deg,_#f0f9ff,_#ffffff)]" />
+      <div
+        className="
+        absolute inset-0 -z-10
+        bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.18),_transparent_40%),radial-gradient(circle_at_top_right,_rgba(14,165,233,0.14),_transparent_35%),linear-gradient(180deg,_#f0f9ff,_#ffffff)]
+        "
+      />
+
 
 
       <div
@@ -24,9 +31,65 @@ export const ShuffleHero = () => {
       >
 
 
+
         {/* LEFT CONTENT */}
         <div className="max-w-3xl">
 
+
+
+          {/* BRAND */}
+          <div className="mb-7 flex items-center gap-4">
+
+
+           <Image
+              src="/logo.jpeg"
+              alt="Deepthi Travels Logo"
+              width={220}
+              height={220}
+              priority
+              className="
+              h-36 w-36
+              sm:h-40 sm:w-40
+              object-contain
+              "
+            />
+
+            <div>
+
+              <p
+                className="
+                text-xl font-semibold
+                text-slate-900
+                sm:text-2xl
+                "
+              >
+                Deepthi Travels
+              </p>
+
+
+              <p
+                className="
+                text-xs font-medium
+                text-sky-600
+                sm:text-sm
+                "
+              >
+                Sri Lanka Transport & Tours
+              </p>
+
+
+            </div>
+
+
+          </div>
+
+
+
+
+
+
+
+          {/* BADGE */}
           <span
             className="
             mb-4 inline-flex rounded-full border
@@ -40,10 +103,15 @@ export const ShuffleHero = () => {
           </span>
 
 
+
+
+
+
+          {/* TITLE */}
           <h1
             className="
-            text-4xl font-semibold tracking-tight
-            text-slate-900
+            text-4xl font-semibold
+            tracking-tight text-slate-900
             sm:text-5xl lg:text-7xl
             "
           >
@@ -51,10 +119,15 @@ export const ShuffleHero = () => {
           </h1>
 
 
+
+
+
+          {/* DESCRIPTION */}
           <p
             className="
             mt-5 max-w-2xl text-sm leading-7
-            text-slate-600 sm:text-lg sm:leading-8
+            text-slate-600
+            sm:text-lg sm:leading-8
             "
           >
             Deepthi Travels provides tourist transportation across Sri Lanka,
@@ -64,8 +137,14 @@ export const ShuffleHero = () => {
 
 
 
+
+
+
+
+
           {/* BUTTONS */}
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+
 
             <Link
               href="/fleet"
@@ -73,11 +152,13 @@ export const ShuffleHero = () => {
               inline-flex h-12 items-center justify-center
               rounded-full bg-sky-600 px-6
               text-sm font-medium text-white
-              transition hover:bg-sky-700 active:scale-95
+              transition hover:bg-sky-700
+              active:scale-95
               "
             >
               Explore our fleet
             </Link>
+
 
 
             <Link
@@ -85,15 +166,22 @@ export const ShuffleHero = () => {
               className="
               inline-flex h-12 items-center justify-center
               rounded-full border border-sky-200
-              bg-white px-6 text-sm font-medium
-              text-slate-900 shadow-sm
-              transition hover:bg-sky-50 active:scale-95
+              bg-white px-6
+              text-sm font-medium text-slate-900
+              shadow-sm transition
+              hover:bg-sky-50
+              active:scale-95
               "
             >
               View services
             </Link>
 
+
           </div>
+
+
+
+
 
 
 
@@ -101,11 +189,12 @@ export const ShuffleHero = () => {
           {/* FEATURES */}
           <div className="mt-8 grid gap-3 sm:grid-cols-3">
 
+
             {[
               ["Island-wide", "Sri Lanka routes"],
               ["Private trips", "Flexible itineraries"],
               ["Transfers", "Airport pickup & drop"],
-            ].map(([title,description]) => (
+            ].map(([title, description]) => (
 
               <div
                 key={title}
@@ -119,6 +208,7 @@ export const ShuffleHero = () => {
                   {title}
                 </div>
 
+
                 <div className="mt-1 text-xs leading-5 text-slate-600">
                   {description}
                 </div>
@@ -127,9 +217,15 @@ export const ShuffleHero = () => {
 
             ))}
 
+
           </div>
 
+
         </div>
+
+
+
+
 
 
 
@@ -148,24 +244,30 @@ export const ShuffleHero = () => {
           />
 
 
+
           <div
             className="
-            rounded-[1.5rem] border border-sky-100
-            bg-white/70 p-2 shadow-xl
-            backdrop-blur-xl sm:p-3
+            rounded-[1.5rem]
+            border border-sky-100
+            bg-white/70 p-2
+            shadow-xl backdrop-blur-xl
+            sm:p-3
             "
           >
 
 
             <div
               className="
-              grid h-[26rem] grid-cols-2 gap-2
-              overflow-hidden rounded-[1.2rem]
+              grid h-[26rem]
+              grid-cols-2 gap-2
+              overflow-hidden
+              rounded-[1.2rem]
               sm:h-[34rem]
               md:h-[46rem]
               md:grid-cols-3
               "
             >
+
 
               {heroImages.map((image,index)=>(
 
@@ -175,19 +277,19 @@ export const ShuffleHero = () => {
                   layout
                   transition={{
                     duration:1.1,
-                    type:"spring"
+                    type:"spring",
                   }}
 
                   className={cn(
                     "group relative overflow-hidden rounded-xl",
                     "bg-sky-100 shadow-sm",
 
-                    // ONLY desktop gets featured layout
                     index === 0 &&
                     "md:col-span-2 md:row-span-2"
                   )}
 
                 >
+
 
                   <Image
                     src={image.src}
@@ -218,6 +320,7 @@ export const ShuffleHero = () => {
                     "
                   />
 
+
                 </motion.div>
 
 
@@ -233,7 +336,9 @@ export const ShuffleHero = () => {
         </div>
 
 
+
       </div>
+
 
     </section>
   );
@@ -241,29 +346,32 @@ export const ShuffleHero = () => {
 
 
 
+
+
+
 const heroImages = [
   {
-    src:"/hero/hero-1.jpg",
-    alt:"Luxury travel vehicle for Sri Lanka tours",
+    src: "/hero/hero-1.jpg",
+    alt: "Luxury travel vehicle for Sri Lanka tours",
   },
   {
-    src:"/hero/hero-2.jpg",
-    alt:"Comfortable airport transfer vehicle",
+    src: "/hero/hero-2.jpg",
+    alt: "Comfortable airport transfer vehicle",
   },
   {
-    src:"/hero/hero-3.jpg",
-    alt:"Private tour travel experience",
+    src: "/hero/hero-3.jpg",
+    alt: "Private tour travel experience",
   },
   {
-    src:"/hero/hero-4.jpg",
-    alt:"Modern van interior for group travel",
+    src: "/hero/hero-4.jpg",
+    alt: "Modern van interior for group travel",
   },
   {
-    src:"/hero/hero-5.jpg",
-    alt:"Day tour transport for Sri Lanka sightseeing",
+    src: "/hero/hero-5.jpg",
+    alt: "Day tour transport for Sri Lanka sightseeing",
   },
   {
-    src:"/hero/hero-6.jpg",
-    alt:"Experienced driver and travel vehicle",
+    src: "/hero/hero-6.jpg",
+    alt: "Experienced driver and travel vehicle",
   },
 ];
