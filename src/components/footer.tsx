@@ -21,7 +21,6 @@ export function Footer() {
           "
         >
 
-
           {/* LOGO */}
           <div className="flex flex-col items-center">
 
@@ -53,9 +52,6 @@ export function Footer() {
 
 
 
-
-
-
           {/* CONTACT */}
           <div className="text-center">
 
@@ -79,25 +75,37 @@ export function Footer() {
               "
             >
 
-              <p>
+              <p className="whitespace-nowrap">
                 +94 76 650 1401
               </p>
 
-              <p>
+              <p className="whitespace-nowrap">
                 +94 76 979 4983
               </p>
 
-              <p className="break-all">
+
+              <p
+                className="
+                whitespace-nowrap
+                text-[11px]
+                "
+              >
                 deepthitravels.com@gmail.com
               </p>
-              <p className="break-all">
-               deepthitravels2@gmail.com
+
+
+              <p
+                className="
+                whitespace-nowrap
+                text-[11px]
+                "
+              >
+                deepthitravels2@gmail.com
               </p>
 
             </div>
 
           </div>
-
 
 
 
@@ -158,7 +166,6 @@ export function Footer() {
               >
                 Contact
               </Link>
-
 
             </div>
 
