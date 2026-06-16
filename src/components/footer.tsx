@@ -7,195 +7,168 @@ export function Footer() {
 
       <div
         className="
-        mx-auto grid max-w-7xl
-        gap-6
+        mx-auto max-w-7xl
         px-5 py-8
         sm:px-8
-        md:grid-cols-3
-        md:gap-10
         "
       >
 
-
-        {/* LOGO + ABOUT */}
         <div
           className="
-          flex flex-col items-center
-          md:items-start
+          grid grid-cols-3
+          gap-4
+          items-start
           "
         >
 
-          <Image
-            src="/logo.png"
-            alt="Deepthi Travels Logo"
-            width={120}
-            height={120}
-            className="
-            h-20 w-20
-            object-contain
-            "
-          />
 
+          {/* LOGO */}
+          <div className="flex flex-col items-center">
 
-          <h2
-            className="
-            mt-2
-            text-lg font-semibold
-            text-slate-900
-            "
-          >
-            Deepthi Travels
-          </h2>
+            <Image
+              src="/logo.png"
+              alt="Deepthi Travels Logo"
+              width={100}
+              height={100}
+              className="
+              h-16 w-16
+              object-contain
+              "
+            />
 
-
-          <p
-            className="
-            mt-2 max-w-sm
-            text-center
-            text-sm leading-5
-            text-slate-600
-            md:text-left
-            "
-          >
-            Comfortable and reliable tourist transportation
-            across Sri Lanka with experienced drivers
-            and modern vehicles.
-          </p>
-
-        </div>
-
-
-
-
-
-
-
-        {/* CONTACT */}
-        <div
-          className="
-          text-center
-          md:text-left
-          "
-        >
-
-          <h3 className="text-base font-semibold text-slate-900">
-            Contact
-          </h3>
-
-
-          <div
-            className="
-            mt-3 space-y-2
-            text-sm text-slate-600
-            "
-          >
-
-            <p>
-              {" "}
-              <span className="font-medium text-slate-900">
-                +94 76 650 1401
-              </span>
+            <p
+              className="
+              mt-2
+              text-center
+              text-xs
+              font-semibold
+              text-slate-900
+              "
+            >
+              Deepthi Travels
             </p>
-
-
-            <p>
-              {" "}
-              <span className="font-medium text-slate-900">
-                +94 76 979 4983
-              </span>
-            </p>
-
-
-            <p className="break-all">
-              {" "}
-              <span className="font-medium text-slate-900">
-                deepthitravels@gmail.com
-              </span>
-            </p>
-
-
-            <p>
-              {" "}
-              <span className="font-medium text-slate-900">
-                Gonahena Road, Sri Lanka
-              </span>
-            </p>
-
 
           </div>
 
-        </div>
 
 
 
 
 
 
+          {/* CONTACT */}
+          <div className="text-center">
 
-
-
-        {/* LINKS */}
-        <div
-          className="
-          text-center
-          md:text-left
-          "
-        >
-
-          <h3 className="text-base font-semibold text-slate-900">
-            Quick Links
-          </h3>
-
-
-          <div
-            className="
-            mt-3 flex flex-col
-            items-center
-            gap-2
-            text-sm text-slate-600
-            md:items-start
-            "
-          >
-
-            <Link
-              href="/"
-              className="transition hover:text-sky-600"
-            >
-              Home
-            </Link>
-
-
-            <Link
-              href="/services"
-              className="transition hover:text-sky-600"
-            >
-              Services
-            </Link>
-
-
-            <Link
-              href="/fleet"
-              className="transition hover:text-sky-600"
-            >
-              Fleet
-            </Link>
-
-
-            <Link
-              href="/contact"
-              className="transition hover:text-sky-600"
+            <h3
+              className="
+              text-sm
+              font-semibold
+              text-slate-900
+              "
             >
               Contact
-            </Link>
+            </h3>
+
+
+            <div
+              className="
+              mt-3
+              space-y-2
+              text-xs
+              text-slate-600
+              "
+            >
+
+              <p>
+                +94 76 650 1401
+              </p>
+
+              <p>
+                +94 76 979 4983
+              </p>
+
+              <p className="break-all">
+                deepthitravels.com@gmail.com
+              </p>
+              <p className="break-all">
+               deepthitravels2@gmail.com
+              </p>
+
+            </div>
 
           </div>
+
+
+
+
+
+
+
+          {/* LINKS */}
+          <div className="text-center">
+
+            <h3
+              className="
+              text-sm
+              font-semibold
+              text-slate-900
+              "
+            >
+              Links
+            </h3>
+
+
+            <div
+              className="
+              mt-3
+              flex flex-col
+              gap-2
+              text-xs
+              text-slate-600
+              "
+            >
+
+              <Link
+                href="/"
+                className="hover:text-sky-600"
+              >
+                Home
+              </Link>
+
+
+              <Link
+                href="/services"
+                className="hover:text-sky-600"
+              >
+                Services
+              </Link>
+
+
+              <Link
+                href="/fleet"
+                className="hover:text-sky-600"
+              >
+                Fleet
+              </Link>
+
+
+              <Link
+                href="/contact"
+                className="hover:text-sky-600"
+              >
+                Contact
+              </Link>
+
+
+            </div>
+
+          </div>
+
 
         </div>
 
 
       </div>
-
-
 
 
 
@@ -211,10 +184,7 @@ export function Footer() {
         text-slate-500
         "
       >
-
-        © {new Date().getFullYear()} Deepthi Travels.
-        {" "}All rights reserved.
-
+        © {new Date().getFullYear()} Deepthi Travels. All rights reserved.
       </div>
 
 
