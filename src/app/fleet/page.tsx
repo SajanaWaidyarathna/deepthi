@@ -12,25 +12,100 @@ export default function FleetPage() {
   }));
 
   return (
-  <main className="min-h-screen bg-sky-50 py-16 text-slate-900">
-    <div className="mx-auto w-full max-w-7xl px-6 md:px-8">
-      <div className="mx-auto mb-12 max-w-3xl text-center">
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-sky-600">
-          Fleet
-        </p>
+    <main
+      className="
+      min-h-screen bg-sky-50
+      py-10 sm:py-16
+      text-slate-900
+      "
+    >
 
-        <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-6xl text-slate-900">
-          Explore the fleet in a cinematic rail.
-        </h1>
+      <div
+        className="
+        mx-auto w-full max-w-7xl
+        px-5 sm:px-6 md:px-8
+        "
+      >
 
-        <p className="mt-4 text-sm leading-7 text-slate-600 md:text-base">
-          Drag, scroll, or use the arrows to move through the vehicle lineup.
-          Use Explore to open a dedicated vehicle page with more images and details.
-        </p>
+
+        {/* HEADER */}
+        <div
+          className="
+          mx-auto mb-8 max-w-3xl
+          text-center
+          sm:mb-12
+          "
+        >
+
+          <p
+            className="
+            text-[11px] font-semibold
+            uppercase tracking-[0.25em]
+            text-sky-600
+            sm:text-xs
+            "
+          >
+            Fleet
+          </p>
+
+
+          <h1
+            className="
+            mt-3 text-3xl
+            font-bold tracking-tight
+            text-slate-900
+            sm:text-4xl md:text-6xl
+            "
+          >
+            Explore the fleet in a cinematic rail.
+          </h1>
+
+
+          <p
+            className="
+            mt-4 text-sm leading-7
+            text-slate-600
+            sm:text-base
+            "
+          >
+            Drag, scroll, or use the arrows to move through the vehicle lineup.
+            Use Explore to open a dedicated vehicle page with more images and
+            details.
+          </p>
+
+
+        </div>
+
+
+
+
+
+        {/* RAIL */}
+        <div
+          className="
+          overflow-hidden rounded-[1.5rem]
+          sm:rounded-[2rem]
+          "
+        >
+
+          <FocusRail
+            items={railItems}
+            autoPlay
+            interval={4500}
+            loop
+            className="
+            rounded-[1.5rem]
+            sm:rounded-[2rem]
+            "
+          />
+
+
+        </div>
+
+
       </div>
 
-        <FocusRail items={railItems} autoPlay interval={4500} loop className="rounded-[2rem]" />
-      </div>
+
     </main>
   );
 }
