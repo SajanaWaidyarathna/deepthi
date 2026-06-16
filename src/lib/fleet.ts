@@ -96,7 +96,7 @@ export const fleetVehicles: FleetVehicle[] = [
     title: "Long couch bus",
     description:
       "Spacious long-distance coach bus designed for comfortable group travel, tours, and corporate transport across Sri Lanka.",
-    meta: "Luxury coach bus",
+    meta: "27 passengers",
     imageSrc: "/fleet/vehicle-5/hero.jpg",
     capacity: "27 passengers",
     imageGallery: [
