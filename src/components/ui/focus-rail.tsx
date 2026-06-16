@@ -29,7 +29,9 @@ function wrap(min: number, max: number, v: number) {
   return ((((v - min) % rangeSize) + rangeSize) % rangeSize) + min;
 }
 
-const BASE_SPRING = {
+import type { Transition } from "framer-motion";
+
+const BASE_SPRING: Transition = {
   type: "spring",
   stiffness: 300,
   damping: 30,
