@@ -7,14 +7,14 @@ import { cn } from "@/lib/utils";
 
 export const ShuffleHero = () => {
   return (
-    <section className="relative isolate overflow-hidden bg-sky-50">
+    <section className="relative isolate overflow-hidden bg-gradient-to-b from-sky-50 to-white">
 
 
-      {/* Background */}
+      {/* soft background glow */}
       <div
         className="
         absolute inset-0 -z-10
-        bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.18),_transparent_40%),radial-gradient(circle_at_top_right,_rgba(14,165,233,0.14),_transparent_35%),linear-gradient(180deg,_#f0f9ff,_#ffffff)]
+        bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.15),transparent_45%)]
         "
       />
 
@@ -22,9 +22,10 @@ export const ShuffleHero = () => {
 
       <div
         className="
-        mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10
+        mx-auto grid max-w-7xl
+        grid-cols-1 items-center gap-12
         px-5 py-12
-        md:grid-cols-[1.05fr_0.95fr]
+        md:grid-cols-[1fr_0.9fr]
         md:px-8 md:py-20
         lg:min-h-[calc(100vh-5rem)]
         "
@@ -36,40 +37,43 @@ export const ShuffleHero = () => {
         <div className="max-w-3xl">
 
 
-
           {/* BRAND */}
-          <div className="mb-7 flex items-center gap-4">
+          <div className="mb-8 flex items-center gap-4">
 
 
-           <Image
+            <Image
               src="/logo.png"
               alt="Deepthi Travels Logo"
               width={220}
               height={220}
               priority
               className="
-              h-36 w-36
-              sm:h-40 sm:w-40
+              h-24 w-24
+              sm:h-32 sm:w-32
               object-contain
               "
             />
 
+
             <div>
 
-              <p
+              <h2
                 className="
-                text-xl font-semibold
+                text-xl
+                font-semibold
+                tracking-tight
                 text-slate-900
-                sm:text-2xl
+                sm:text-3xl
                 "
               >
                 Deepthi Travels
-              </p>
+              </h2>
 
 
               <p
                 className="
-                text-xs font-medium
+                mt-1
+                text-xs
                 text-sky-600
                 sm:text-sm
                 "
@@ -77,9 +81,7 @@ export const ShuffleHero = () => {
                 Sri Lanka Transport & Tours
               </p>
 
-
             </div>
-
 
           </div>
 
@@ -87,21 +89,19 @@ export const ShuffleHero = () => {
 
 
 
-
-
-          {/* BADGE */}
-          <span
+          {/* LABEL */}
+          <p
             className="
-            mb-4 inline-flex rounded-full border
-            border-sky-200 bg-sky-100 px-4 py-2
-            text-[10px] font-semibold uppercase
-            tracking-[0.25em] text-sky-700
-            sm:text-xs
+            mb-5
+            text-xs
+            font-medium
+            uppercase
+            tracking-[0.18em]
+            text-sky-600
             "
           >
-            Better every journey
-          </span>
-
+            Travel made simple
+          </p>
 
 
 
@@ -110,12 +110,17 @@ export const ShuffleHero = () => {
           {/* TITLE */}
           <h1
             className="
-            text-4xl font-semibold
-            tracking-tight text-slate-900
-            sm:text-5xl lg:text-7xl
+            max-w-2xl
+            text-4xl
+            font-semibold
+            leading-tight
+            tracking-tight
+            text-slate-900
+            sm:text-5xl
+            lg:text-6xl
             "
           >
-            Travel Sri Lanka in comfort, style, and modern luxury.
+            Comfortable journeys across Sri Lanka.
           </h1>
 
 
@@ -125,57 +130,67 @@ export const ShuffleHero = () => {
           {/* DESCRIPTION */}
           <p
             className="
-            mt-5 max-w-2xl text-sm leading-7
+            mt-6
+            max-w-xl
+            text-sm
+            leading-7
             text-slate-600
-            sm:text-lg sm:leading-8
+            sm:text-base
             "
           >
-            Deepthi Travels provides tourist transportation across Sri Lanka,
-            private and group tours, airport transfers, day tours,
-            multi-day tours, and modern buses and vans with experienced drivers.
+            Deepthi Travels provides reliable transportation,
+            private tours, airport transfers, and group travel
+            with comfortable vehicles and experienced drivers.
           </p>
 
 
 
 
 
-
-
-
           {/* BUTTONS */}
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-
+          <div
+            className="
+            mt-8
+            flex flex-col gap-3
+            sm:flex-row
+            "
+          >
 
             <Link
               href="/fleet"
               className="
-              inline-flex h-12 items-center justify-center
-              rounded-full bg-sky-600 px-6
-              text-sm font-medium text-white
-              transition hover:bg-sky-700
-              active:scale-95
+              flex h-12 items-center justify-center
+              rounded-full
+              bg-sky-600
+              px-7
+              text-sm
+              font-medium
+              text-white
+              transition
+              hover:bg-sky-700
               "
             >
-              Explore our fleet
+              Explore Fleet
             </Link>
-
 
 
             <Link
               href="/services"
               className="
-              inline-flex h-12 items-center justify-center
-              rounded-full border border-sky-200
-              bg-white px-6
-              text-sm font-medium text-slate-900
-              shadow-sm transition
+              flex h-12 items-center justify-center
+              rounded-full
+              border border-sky-200
+              bg-white
+              px-7
+              text-sm
+              font-medium
+              text-slate-800
+              transition
               hover:bg-sky-50
-              active:scale-95
               "
             >
-              View services
+              Services
             </Link>
-
 
           </div>
 
@@ -183,40 +198,43 @@ export const ShuffleHero = () => {
 
 
 
-
-
-
           {/* FEATURES */}
-          <div className="mt-8 grid gap-3 sm:grid-cols-3">
-
+          <div
+            className="
+            mt-10
+            grid gap-3
+            sm:grid-cols-3
+            "
+          >
 
             {[
-              ["Island-wide", "Sri Lanka routes"],
-              ["Private trips", "Flexible itineraries"],
-              ["Transfers", "Airport pickup & drop"],
-            ].map(([title, description]) => (
+              ["Island-wide", "Travel routes"],
+              ["Private trips", "Flexible plans"],
+              ["Transfers", "Airport service"],
+            ].map(([title, desc]) => (
 
               <div
                 key={title}
                 className="
-                rounded-2xl border border-sky-100
-                bg-white p-4 shadow-sm
+                rounded-xl
+                border border-sky-100
+                bg-white
+                p-4
                 "
               >
 
-                <div className="text-sm font-semibold text-slate-900">
+                <p className="text-sm font-semibold text-slate-900">
                   {title}
-                </div>
+                </p>
 
 
-                <div className="mt-1 text-xs leading-5 text-slate-600">
-                  {description}
-                </div>
+                <p className="mt-1 text-xs text-slate-600">
+                  {desc}
+                </p>
 
               </div>
 
             ))}
-
 
           </div>
 
@@ -229,17 +247,18 @@ export const ShuffleHero = () => {
 
 
 
-
-
-        {/* IMAGE SECTION */}
+        {/* IMAGE GRID */}
         <div className="relative">
 
 
           <div
             className="
-            absolute -inset-3 -z-10 rounded-[2rem]
-            bg-gradient-to-br from-sky-200/40
-            via-transparent to-sky-100/40 blur-3xl
+            absolute
+            -inset-4
+            -z-10
+            rounded-[2rem]
+            bg-sky-200/30
+            blur-3xl
             "
           />
 
@@ -247,23 +266,25 @@ export const ShuffleHero = () => {
 
           <div
             className="
-            rounded-[1.5rem]
-            border border-sky-100
-            bg-white/70 p-2
-            shadow-xl backdrop-blur-xl
-            sm:p-3
+            rounded-3xl
+            border border-sky-100/70
+            bg-white/90
+            p-3
+            shadow-md
             "
           >
 
 
             <div
               className="
-              grid h-[26rem]
-              grid-cols-2 gap-2
+              grid
+              h-[26rem]
+              grid-cols-2
+              gap-3
               overflow-hidden
-              rounded-[1.2rem]
+              rounded-2xl
               sm:h-[34rem]
-              md:h-[46rem]
+              md:h-[42rem]
               md:grid-cols-3
               "
             >
@@ -276,18 +297,15 @@ export const ShuffleHero = () => {
                   key={image.src}
                   layout
                   transition={{
-                    duration:1.1,
-                    type:"spring",
+                    duration:1,
+                    type:"spring"
                   }}
 
                   className={cn(
-                    "group relative overflow-hidden rounded-xl",
-                    "bg-sky-100 shadow-sm",
-
+                    "relative overflow-hidden rounded-xl",
                     index === 0 &&
                     "md:col-span-2 md:row-span-2"
                   )}
-
                 >
 
 
@@ -296,30 +314,17 @@ export const ShuffleHero = () => {
                     alt={image.alt}
                     fill
                     priority={index < 2}
-
                     sizes="
                     (max-width:640px) 50vw,
-                    (min-width:768px) 33vw
+                    33vw
                     "
-
                     className="
-                    object-cover object-center
-                    transition duration-700
-                    group-hover:scale-105
+                    object-cover
+                    transition
+                    duration-700
+                    hover:scale-105
                     "
                   />
-
-
-                  <div
-                    className="
-                    absolute inset-0
-                    bg-gradient-to-t
-                    from-sky-900/20
-                    via-transparent
-                    to-transparent
-                    "
-                  />
-
 
                 </motion.div>
 
@@ -347,31 +352,29 @@ export const ShuffleHero = () => {
 
 
 
-
-
 const heroImages = [
   {
-    src: "/hero/hero-1.jpg",
-    alt: "Luxury travel vehicle for Sri Lanka tours",
+    src:"/hero/hero-1.jpg",
+    alt:"Luxury travel vehicle",
   },
   {
-    src: "/hero/hero-2.jpg",
-    alt: "Comfortable airport transfer vehicle",
+    src:"/hero/hero-2.jpg",
+    alt:"Airport transfer vehicle",
   },
   {
-    src: "/hero/hero-3.jpg",
-    alt: "Private tour travel experience",
+    src:"/hero/hero-3.jpg",
+    alt:"Private tour travel",
   },
   {
-    src: "/hero/hero-4.jpg",
-    alt: "Modern van interior for group travel",
+    src:"/hero/hero-4.jpg",
+    alt:"Vehicle interior",
   },
   {
-    src: "/hero/hero-5.jpg",
-    alt: "Day tour transport for Sri Lanka sightseeing",
+    src:"/hero/hero-5.jpg",
+    alt:"Sri Lanka sightseeing transport",
   },
   {
-    src: "/hero/hero-6.jpg",
-    alt: "Experienced driver and travel vehicle",
+    src:"/hero/hero-6.jpg",
+    alt:"Travel service vehicle",
   },
 ];
