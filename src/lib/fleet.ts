@@ -30,8 +30,8 @@ export const fleetVehicles: FleetVehicle[] = [
   },
   {
     id: 2,
-    slug: "long-coach-bus",
-    title: "Long coach bus",
+    slug: "37-seater-underluggage-bus",
+    title: "37-seater underluggage bus",
     description:
       "Designed for larger group travel with comfortable seating and long-distance touring in mind.",
     meta: "37 passengers",
@@ -88,7 +88,28 @@ export const fleetVehicles: FleetVehicle[] = [
       "Ideal for couples, families, and small groups",
     ],
   },
-  
+
+  // NEW VEHICLE
+  {
+    id: 5,
+    slug: "long-couch-bus",
+    title: "Long couch bus",
+    description:
+      "Spacious long-distance coach bus designed for comfortable group travel, tours, and corporate transport across Sri Lanka.",
+    meta: "Luxury coach bus",
+    imageSrc: "/fleet/vehicle-5/hero.jpg",
+    capacity: "27 passengers",
+    imageGallery: [
+      "/fleet/vehicle-5/hero.jpg",
+      "/fleet/vehicle-5/side.jpg",
+      "/fleet/vehicle-5/interior.jpg",
+    ],
+    details: [
+      "Extra-long coach for large group travel",
+      "Comfortable reclining seats for long journeys",
+      "Ideal for corporate events, tours, and pilgrimages",
+    ],
+  },
 ];
 
 export function getFleetVehicleBySlug(slug: string) {
