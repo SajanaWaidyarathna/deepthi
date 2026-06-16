@@ -26,7 +26,7 @@ export function Footer() {
         >
 
           <Image
-            src="/logo.jpeg"
+            src="/logo.png"
             alt="Deepthi Travels Logo"
             width={120}
             height={120}

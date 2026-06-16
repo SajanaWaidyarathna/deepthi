@@ -23,7 +23,7 @@ export function SiteHeader() {
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/logo.jpeg"
+            src="/logo.png"
             alt="Deepthi Travels Logo"
             width={55}
             height={55}

@@ -245,7 +245,10 @@ export default function ContactPage() {
                   </p>
 
                   <p className="mt-1 text-sm font-semibold text-slate-900 break-all sm:text-base">
-                    deepthitravels@gmail.com
+                    deepthitravels.com@gmail.com
+                  </p>
+                   <p className="mt-1 text-base font-semibold text-slate-900">
+                    deepthitravels2@gmail.com
                   </p>
 
                 </div>
@@ -260,7 +263,7 @@ export default function ContactPage() {
                   </p>
 
                   <p className="mt-1 text-base font-semibold text-slate-900">
-                    Gonahena Road, Sri Lanka
+                    441,1/ Gonahena , Kadawatha
                   </p>
 
                 </div>
@@ -355,7 +358,7 @@ export default function ContactPage() {
 
 
             <Image
-              src="/logo.jpeg"
+              src="/logo.png"
               alt="Deepthi Travels Logo"
               width={260}
               height={260}

@@ -42,7 +42,7 @@ export const ShuffleHero = () => {
 
 
            <Image
-              src="/logo.jpeg"
+              src="/logo.png"
               alt="Deepthi Travels Logo"
               width={220}
               height={220}
