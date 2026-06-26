@@ -20,8 +20,52 @@ const inter = Inter({
 
 
 export const metadata: Metadata = {
-  title: "Deepthi Travels",
-  description: "A modern travel website for Deepthi Travels Sri Lanka.",
+  title: {
+    default: "Deepthi Travels | Sri Lanka Tours & Transport",
+    template: "%s | Deepthi Travels",
+  },
+
+  description:
+    "Deepthi Travels provides reliable transportation, airport transfers, private tours, and customized travel experiences across Sri Lanka.",
+
+  keywords: [
+    "Deepthi Travels",
+    "Sri Lanka tours",
+    "Sri Lanka transport",
+    "airport transfers Sri Lanka",
+    "private tours Sri Lanka",
+    "travel services Sri Lanka",
+  ],
+
+  authors: [
+    {
+      name: "Deepthi Travels",
+    },
+  ],
+
+  creator: "Deepthi Travels",
+
+  metadataBase: new URL("https://deepthitravels.lk"),
+
+  alternates: {
+    canonical: "/",
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+
+  openGraph: {
+    title: "Deepthi Travels | Sri Lanka Tours & Transport",
+    description:
+      "Reliable transport and personalized travel experiences across Sri Lanka.",
+    url: "https://deepthitravels.lk",
+    siteName: "Deepthi Travels",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 
@@ -50,6 +94,8 @@ export default function RootLayout({
           flex
           flex-col
           font-body
+          bg-background
+          text-foreground
         "
       >
 
