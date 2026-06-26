@@ -1,27 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Manrope, Inter } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { Footer } from "@/components/footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import "./globals.css";
 
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-heading",
   subsets: ["latin"],
 });
 
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-body",
   subsets: ["latin"],
 });
+
 
 
 export const metadata: Metadata = {
-  title: "Deepthi Travells",
+  title: "Deepthi Travels",
   description: "A modern travel website for Deepthi Travels Sri Lanka.",
 };
+
 
 
 export default function RootLayout({
@@ -31,30 +33,42 @@ export default function RootLayout({
 }>) {
 
   return (
+
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`
+        ${manrope.variable}
+        ${inter.variable}
+        h-full
+        antialiased
+      `}
     >
 
-      <body className="min-h-full flex flex-col">
+      <body
+        className="
+          min-h-full
+          flex
+          flex-col
+          font-body
+        "
+      >
 
         <SiteHeader />
 
 
-        {/* PAGE CONTENT */}
         <main className="flex-1">
           {children}
         </main>
 
 
-        {/* GLOBAL FOOTER */}
         <Footer />
-        <WhatsAppButton />
 
+        <WhatsAppButton />
 
 
       </body>
 
     </html>
+
   );
 }
