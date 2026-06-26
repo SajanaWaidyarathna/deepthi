@@ -17,12 +17,12 @@ export function Footer() {
         <div
           className="
             grid
-            grid-cols-3
+            grid-cols-1
+            md:grid-cols-3
             gap-8
             items-center
           "
         >
-
 
 
           {/* LOGO */}
@@ -31,6 +31,7 @@ export function Footer() {
               flex
               flex-col
               items-center
+              text-center
             "
           >
 
@@ -40,8 +41,8 @@ export function Footer() {
               width={90}
               height={90}
               className="
-                h-16
-                w-16
+                h-20
+                w-20
                 object-contain
               "
             />
@@ -62,7 +63,7 @@ export function Footer() {
             <p
               className="
                 mt-1
-                text-[11px]
+                text-xs
                 text-slate-500
               "
             >
@@ -77,18 +78,28 @@ export function Footer() {
 
 
 
+
           {/* CONTACT */}
           <div
             className="
-              border-x
+              border-y
+              md:border-y-0
+              md:border-x
               border-sky-100
-              px-8
+
+              py-5
+              md:py-0
+              px-0
+              md:px-8
             "
           >
 
             <h3
               className="
-                mb-3
+                mb-4
+                text-center
+                md:text-left
+
                 text-xs
                 font-bold
                 uppercase
@@ -104,25 +115,43 @@ export function Footer() {
 
             <div
               className="
-                space-y-3
-                text-xs
+                space-y-4
+                text-sm
                 text-slate-600
               "
             >
 
 
-              <div className="flex gap-3">
+
+              <div
+                className="
+                  flex
+                  items-start
+                  gap-3
+                "
+              >
 
                 <Phone
-                  size={14}
-                  className="text-sky-600 shrink-0"
+                  size={16}
+                  className="
+                    mt-0.5
+                    shrink-0
+                    text-sky-600
+                  "
                 />
 
-                <p>
+
+                <p className="leading-relaxed">
+
                   <span className="font-semibold text-slate-800">
                     Telephone:
-                  </span>{" "}
+                  </span>
+
+                  <br className="sm:hidden"/>
+
+                  {" "}
                   +94 76 650 1401 / +94 76 979 4983
+
                 </p>
 
               </div>
@@ -130,25 +159,44 @@ export function Footer() {
 
 
 
-              <div className="flex gap-3">
+
+
+              <div
+                className="
+                  flex
+                  items-start
+                  gap-3
+                "
+              >
 
                 <Mail
-                  size={14}
-                  className="text-sky-600 shrink-0"
+                  size={16}
+                  className="
+                    mt-0.5
+                    shrink-0
+                    text-sky-600
+                  "
                 />
 
-                <p className="break-all">
+
+                <p className="
+                  leading-relaxed
+                  break-words
+                ">
 
                   <span className="font-semibold text-slate-800">
                     Email:
-                  </span>{" "}
+                  </span>
+
+                  <br className="sm:hidden"/>
+
+                  {" "}
                   deepthitravels.com@gmail.com /
                   deepthitravels2@gmail.com
 
                 </p>
 
               </div>
-
 
 
             </div>
@@ -176,7 +224,7 @@ export function Footer() {
 
             <h3
               className="
-                mb-3
+                mb-4
                 text-xs
                 font-bold
                 uppercase
@@ -189,29 +237,35 @@ export function Footer() {
 
 
 
+
             <div
               className="
-                flex
-                flex-col
-                gap-2
-                text-xs
+                grid
+                grid-cols-2
+                md:grid-cols-1
+                gap-x-8
+                gap-y-3
+
+                text-sm
                 text-slate-600
               "
             >
+
 
               <Link
                 href="/"
                 className="
                   flex
                   items-center
-                  gap-1
+                  gap-2
                   hover:text-sky-600
                   transition
                 "
               >
-                <ArrowRight size={12}/>
+                <ArrowRight size={14}/>
                 Home
               </Link>
+
 
 
               <Link
@@ -219,14 +273,16 @@ export function Footer() {
                 className="
                   flex
                   items-center
-                  gap-1
+                  gap-2
                   hover:text-sky-600
                   transition
                 "
               >
-                <ArrowRight size={12}/>
+                <ArrowRight size={14}/>
                 Services
               </Link>
+
+
 
 
               <Link
@@ -234,14 +290,17 @@ export function Footer() {
                 className="
                   flex
                   items-center
-                  gap-1
+                  gap-2
                   hover:text-sky-600
                   transition
                 "
               >
-                <ArrowRight size={12}/>
+                <ArrowRight size={14}/>
                 Fleet
               </Link>
+
+
+
 
 
               <Link
@@ -249,12 +308,12 @@ export function Footer() {
                 className="
                   flex
                   items-center
-                  gap-1
+                  gap-2
                   hover:text-sky-600
                   transition
                 "
               >
-                <ArrowRight size={12}/>
+                <ArrowRight size={14}/>
                 Contact
               </Link>
 
@@ -265,12 +324,10 @@ export function Footer() {
           </div>
 
 
-
         </div>
 
 
       </div>
-
 
 
 
@@ -284,7 +341,10 @@ export function Footer() {
           border-t
           border-sky-100
           bg-sky-50/50
-          py-3
+
+          px-4
+          py-4
+
           text-center
           text-xs
           text-slate-500
@@ -292,7 +352,8 @@ export function Footer() {
       >
 
         © {new Date().getFullYear()} Deepthi Travels.
-        All rights reserved.
+        <br className="sm:hidden"/>
+        {" "}All rights reserved.
 
       </div>
 
