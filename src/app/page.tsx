@@ -1,7 +1,7 @@
 import { ShuffleHero } from "@/components/ui/shuffle-grid";
 import ServicesPage from "./services/page";
 import ContactPage from "./contact/page";
-// import FleetPage from "./fleet/page";  (if you have one)
+import FleetPage from "./fleet/page";  
 
 
 export default function Home() {
@@ -33,14 +33,14 @@ export default function Home() {
 
 
       {/* FLEET */}
-      {/* 
+      
       <section
         id="fleet"
         className="scroll-mt-24"
       >
-        <FleetPage />
+        <FleetPage/>
       </section>
-      */}
+      
 
 
 
