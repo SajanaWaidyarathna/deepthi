@@ -1,13 +1,14 @@
 import { MetadataRoute } from "next";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export const dynamic = "force-static";
 
+export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: "https://deepthitravels.lk",
       lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
     },
   ];
-
 }
-//
